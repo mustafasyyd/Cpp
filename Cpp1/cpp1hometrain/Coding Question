@@ -1,0 +1,10 @@
+# global variable out of main vs local variable inside main
+        
+        //EXPLAIN:
+            (Defining and initializing two variables with the same name,
+             one out of main and the other inside it.
+             THEN, printing with name.)
+
+        //RESULT:
+            (Printed succ. without error of the existence of two variable with same name,
+             but printed the inside variable.)

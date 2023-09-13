@@ -1,0 +1,11 @@
+#include <iostream>
+#include <memory>
+
+void useSmart(std::weak_ptr<int> weak_ptr)
+{
+    std::shared_ptr<int> retrieved_shared = weak_ptr.lock();
+    std::cout << "int value is " << *retrieved_shared << "\n";}int main(){    std::shared_ptr<int> smart_shared = std::make_shared<int>(6);    
+    std::weak_ptr<int> smart_weak = smart_shared;    useSmart(smart_weak);
+   return 0;
+   
+}
