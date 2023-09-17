@@ -26,14 +26,15 @@ class Graphics
 
 };
 
-class Line :public Graphics
+class Line : public Graphics
 {
     public:
-    Line(double len=0) : length(len) {}
+    Line(double len=0) 
+        : length(len) 
+    {}
     
-    void info() const{
-        std::cout<< "Line ";
-    }
+    void info() const
+    { std::cout<< "Line "; }
     
     void draw() const override{
         std::cout<< this->length<< " m\n";
@@ -43,24 +44,23 @@ class Line :public Graphics
     double length;
 };
 
-class Rectangle :public Graphics
+class Rectangle : public Graphics
 {
     public:
-    Rectangle(double len=0, double width=0) : length(len) , width(width) {}
+        Rectangle(double len=0, double width=0) : length(len) , width(width) {}
     
-    void info() const  {
-        std::cout<< "Rectangle ";
-    }
-    void draw() const{
-        std::cout<< this->length<<" x "<< this->width << " cmxcm\n";
-    }
+        void info() const  
+        { std::cout<< "Rectangle "; }
+    
+        void draw() const
+        { std::cout<< this->length<<" x "<< this->width << " cmxcm\n"; }
 
     private:
-    double length;
-    double width;
+        double length;
+        double width;
 };
 
-class Circle :public Graphics
+class Circle : public Graphics
 {
     public:
     Circle(double dia=0) : diameter(dia) {}
@@ -78,7 +78,7 @@ class Circle :public Graphics
     double diameter;
 };
 
-class Text :public Graphics
+class Text : public Graphics
 {
     public:
     Text(std::string txt_str = " ") : text_string(txt_str) {}
@@ -95,7 +95,7 @@ class Text :public Graphics
     std::string text_string;
 };
 
-class Picture final :public Graphics  //final keyword is written only for practicing purpose
+class Picture final : public Graphics  //final keyword is written only for practicing purpose
 {
     public:
     Picture(){

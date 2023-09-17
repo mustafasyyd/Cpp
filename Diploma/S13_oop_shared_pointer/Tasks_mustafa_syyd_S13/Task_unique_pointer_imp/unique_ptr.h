@@ -32,7 +32,7 @@ class UniquePointer
         T& operator* ()    {   return *unique;  }
         T* operator->()    {    return unique;  }
         
-
+    
         static T* MakeUnique( T* p )
         {
             return p;
