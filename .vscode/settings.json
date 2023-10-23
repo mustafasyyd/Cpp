@@ -53,5 +53,7 @@
     "bitset": "cpp",
     "complex": "cpp"
   },
-  "C_Cpp.errorSquiggles": "enabled"
+  "C_Cpp.errorSquiggles": "enabled",
+  "cmake.configureSettings": { "gtest_build_samples": "ON" },
+  "cmake.sourceDirectory": "/media/mustafa/B/embdd/embdd c++/labs/Cpp/gtest"
 }
