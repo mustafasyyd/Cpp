@@ -9,8 +9,12 @@
 
 int main(){
 
+    std::cout
+    << "Mustafa" 
+    << 
+    std::endl;
 
     return 0;
 }
 
-//cd 'D:\Mph syyd\#embdd\Embdd `[cpp`]\Labs\Emdd.cpp\'
+//cd 'D:\Mph syyd\#embdd\Embdd `[cpp`]\Labs\Emdd.cpp\'cl
