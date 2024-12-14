@@ -3,30 +3,37 @@
     //NOTE: (not recommended to do that, to prevent conflicts.)
 //using namespace std;
 
-//namespace creation: it's a accessed global space.
-        //A Space: is a access machnism to global variable
-namespace sonn{
+/*
+    Namespace creation: it's an accessed global space.
+    A resolution operator :: is an access machnism to global variable.
+*/
 
-    int altermust = 27;
-    int altermhmud = 26;
-    int alterrhman = 25;
+using std::endl;
+
+namespace Alter{
+    int altermust    = 27   ;
+    int altermhmud   = 26   ;
+    int altermansour = 26   ;
+    int alterrhman   = 25   ;
 }
 
-    int altermust = 40;
+int altermust       = 17    ;
+
 
 int main(){
+    //Resolved at compile time, no mem section allocated for it, replaced by its value.
+    constexpr int alter = 20    ;
 
-    //Compile-time, no space consumed or allocated by this exp.
-    constexpr int alter=20;
 
     //alter von Freunden.
-    int altermhmud = alter +7;
-    int alterismail = alter+8;  
-    //int altermust = 0;
+    int alterismail = alter + 8 ;   //alter ist ersetzt zur compile Zeit.
+    // int altermust = 98;
+
 
 
     //Drucken von Angabe.
-    std::cout<< "Das ALter Mhmuds ist: "<< altermust <<std::endl;
-
+    std::cout << "Das ALter Mustafa ist: " << altermust << endl;
+    std::cout << "Das ALter Mustafa ist: " << Alter::altermust << endl;
+ 
     return 0;
 }

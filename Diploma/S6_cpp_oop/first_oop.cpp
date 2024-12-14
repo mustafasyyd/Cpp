@@ -1,13 +1,7 @@
 #include <iostream>
 
-
-class GYM{
-
-    protected:
-
-    //attributes.
-    int wiederh, anzahl;
-
+class GYM
+{
     //methods.
     int Calc_Zeit(){
         return (wiederh*anzahl*2) ;
@@ -18,29 +12,30 @@ class GYM{
     void Set_Wiedeh(int wid){
         wiederh = wid;
     }
-
     void Set_Anzahl(int anz){
         anzahl = anz;
     }
-
     void Get_Zeit(){
         std::cout<< Calc_Zeit() << std::endl;
     }
 
+    protected:
+    //attributes.
+    int wiederh, anzahl;
 };
 
 
-class Sport{
-   
+
+class Sport
+{
     protected:
     int spielzeit;
     int punkte;
-
 };
 
-class Basketball : Sport{
-    char ballfarbe;
 
+class Basketball : Sport
+{
     public:
     void Set_Ballfarbe(char ballfarb){
         ballfarbe = ballfarb;
@@ -57,10 +52,12 @@ class Basketball : Sport{
         std::cout<< spielzeit << std::endl;
     }
 
+    char ballfarbe;
 };
 
 
-int main(){
+int main()
+{
 
     GYM g;
     g.Set_Anzahl(8);

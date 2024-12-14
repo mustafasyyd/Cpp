@@ -14,8 +14,10 @@ using namespace std;
 
 int main()
 {
-    vector<int> array = {0 , 2 , 4 , 6 ,8 , 10 };
-    cout << "array elements:[ ";
+    // vector<int> array = {0 , 2 , 4 , 6 ,8 , 10 };
+    // vector<int> array {0 , 2 , 4 , 6 ,8 , 10 };
+    vector<int> array( {0 , 2 , 4 , 6 ,8 , 10 } );
+    cout << "Array elements:[ ";
     for( auto el : array ) 
         cout << el << " ";
     cout << "]" <<endl;
@@ -26,25 +28,34 @@ int main()
     //MAXSIZE = *PtoMAX;
  
     auto MAXSIZE = *( max_element(array.begin() , array.end()) );
+
     cout << "Maximum element in the array is --> "
          <<MAXSIZE 
-         <<endl;    
+         << 
+    endl;    
 
     vector<int>freq (MAXSIZE+1);
+
     cout << "frequency array size is --> "
-         << freq.size() << endl
+         << freq.size() << 
+    endl
          << "is frequency array empty? --> "
-         << boolalpha << freq.empty() << endl;
+         << boolalpha << freq.empty() << 
+    endl;
 
     for(auto i=0; i<array.size() ;i++)
         freq[(array[i])]++;
     
-    cout << "frequency array: \n"
-         << "[ 0 1 2 3 4 5 6 7 8 9 10]"
-         <<endl << "[ ";
+    cout << "Frequency array: \n"
+         << " 0 1 2 3 4 5 6 7 8 9 10 "
+         << endl
+         << " | | | | | | | | | | | " 
+         << endl;
+
+    cout << "[";
     for( auto& el : freq )
         cout << el << " " ;
-    cout << "]" <<endl;
+    cout << "]" << endl;
     
     return 0;
 }

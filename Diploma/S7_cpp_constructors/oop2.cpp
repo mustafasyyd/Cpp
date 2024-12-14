@@ -1,6 +1,3 @@
-#include <iostream>
-#include <vector>
-
 /**
  * 
  * 
@@ -8,11 +5,13 @@
  * @author: mustafa.syyd
 */
 
+
+#include <iostream>
+#include <vector>
+
 class employee
 {
-
     public:
-
     employee(std::string, int , int &);
     void Set_salary(int);
     int Get_salary();
@@ -29,6 +28,7 @@ class manager: public employee
     manager (std::string name, int id, int &salary) : employee(name, id, salary) {}
 };
 
+//------------------------------------------------------------------------------------------------
 employee::employee (std::string name, int id , int &salary) : name(name), id(id), salary(salary)
 {
     std::cout<< "employee is created." <<std::endl;
@@ -44,6 +44,8 @@ int employee::Get_salary()
     return salary;
 }
 
+
+//-------------------------------------------------------------------------
 void Display_employees(std::vector <employee*> &employee_vec)
 {
     for( auto emp : employee_vec)

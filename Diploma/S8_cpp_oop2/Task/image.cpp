@@ -1,29 +1,34 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
-#include <iterator>
-
-using std::vector; using std::cout; using std::endl;
-
 /**
  *  < Create a class names image has 2D vector of uint8_t
  *    you can set/get an image and copy image into another image >
  * 
  * @file image.cpp
  * @author: mustafa.syyd
+ * @date: 7/2023
 */
 
-class image{
-    
+#include <iostream>
+#include <cstdint>
+#include <vector>
+#include <algorithm>
+#include <iterator>
+
+using std::vector   ;
+using std::cout     ;
+using std::endl     ;
+
+// typedef uint8_t int ;
+
+class image
+{    
     public: 
     //constructors
-    image (const vector <vector <uint8_t>> &image_vec); //parametrized constructor.
-    image( const image &img); //copy constructor
+    image ( const vector < vector <uint8_t> > &image_vec ); //parametrized constructor.
+    image( const image &img );                           //copy constructor
 
     //methods
     void Set_image(const vector <vector <uint8_t>> &image_vec);
     vector <vector <uint8_t>> Get_image ();    
-   
     void Print_image();
     void Copy_image(const image &img_cpy);
     void Copy_image_dyn(const image *img_cpy);
@@ -34,22 +39,31 @@ class image{
 
 //definitions uint16_t 
     //constructors
-image::image (const vector <vector <uint8_t>> &image_vec) : image_vec(image_vec) {} //parametrized constructor.
+image::image (const vector <vector <uint8_t>> &image_vec)   
+                : image_vec(image_vec) 
+{} //parametrized constructor.
 
-image::image(const image &img) : image_vec (img.image_vec) {} //copy constructor
+image::image(const image &img) 
+        : image_vec (img.image_vec) 
+{} //copy constructor
+
+
 
     //methods
-void image::Set_image( const vector <vector <uint8_t>> &image_vec ){
-        this->image_vec = image_vec;
+void image::Set_image( const vector <vector <uint8_t>> &image_vec )
+{ 
+    this->image_vec = image_vec; 
 }
 
-vector <vector <uint8_t>> image::Get_image (){
-    return image_vec;
+vector <vector <uint8_t>> image::Get_image () 
+{ 
+    return image_vec; 
 }
 
 void image::Print_image()
-{ //range-based loop hat nicht ausgefuert/ging nicht.
-    //std::for_each ( this->image_vec.begin(), this->image_vec.end(), [](uint16_t& el){cout<< el <<endl;}); 
+{ 
+    //range-based loop wurde nicht ausgefürt/ging nicht.
+    // std::for_each ( this->image_vec.begin(), this->image_vec.end(), [](uint16_t& el){cout<< el <<endl;}); 
     for(int i=0; i<image_vec.size() ; i++)
     {
         for(int j=0; j< 3 ; j++)
@@ -60,11 +74,13 @@ void image::Print_image()
 }
 
 //public function
-void image::Copy_image(const image &img_cpy){
+void image::Copy_image(const image &img_cpy)
+{
     this->image_vec = img_cpy.image_vec; 
 }
 
-void image::Copy_image_dyn(const image *img_cpy){
+void image::Copy_image_dyn(const image *img_cpy)
+{
     this->image_vec = img_cpy->image_vec;
 }
 

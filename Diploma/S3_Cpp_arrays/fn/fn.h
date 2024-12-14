@@ -1,5 +1,6 @@
-#pragma once
-#include<iostream>
+// #pragma once
+#ifndef __FN__
+#define __FN__
 
 namespace name_usr{
     
@@ -7,5 +8,6 @@ namespace name_usr{
     void printfn(const std::string s);
 }
 
-
 void printfn(const std::string s);
+
+#endif // __FN__

@@ -7,9 +7,7 @@ int main()
     double miles=0.0; double km=0.0;
     constexpr double MilesToKm = 1.6;
    
-    std::cout << "Inerst the distance: " << std::endl;
-    std::cin >> miles;
-
+    std::cout << "Inerst the distance: " << std::endl; std::cin >> miles;
     std::cout << "the distance equals : " << miles << std::endl;
 
 

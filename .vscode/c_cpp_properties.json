@@ -11,7 +11,7 @@
                 "UNICODE",
                 "_UNICODE"
             ],
-            "compilerPath": "/usr/bin/g++",
+            "compilerPath": "F:\msys64\ucrt64\bing++",
             "cStandard": "c11",
             "cppStandard": "gnu++11",
             "intelliSenseMode": "gcc-x64"

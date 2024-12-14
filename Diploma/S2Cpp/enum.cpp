@@ -1,8 +1,8 @@
 // Online C++ compiler to run C++ program online
 #include <iostream>
 #include <typeinfo>
-using std::cout
-    , std::endl;
+
+using std::cout, std::endl;
 
 class Log
 {
@@ -32,7 +32,7 @@ class Log
         Level level=INFO;
 };
 
-enum num : char 
+enum Alphanumeric : char 
 {
     a='a', 
     b    , 
@@ -44,22 +44,35 @@ enum num : char
 
 int main() 
 {
-    Log log;
-    log.show_level(log.ERROR);
-    log.show_level(Log::WARNING);
+    Log log                     ;   //Create a log
+    //SHow status level
+    log.show_level(log.ERROR)   ;   //access through obj
+    log.show_level(Log::WARNING);   //access through class
+    log.show_level(Log::INFO)   ;   //access through object
+    log.show_level(log.INFO)    ;   //access through obj
     
+    // Create a character variable, store it in .data, char is assigned an enum var, the its value.
+    char floor_char = f         ;
+    //get type of x charachter and set as a type of new variable y, which is defined.
+    decltype(floor_char) Cinnamon = c ;
+    //create an object of enum "Alphanumeric".
+    Alphanumeric alpha = a;
     
-    // char x=f;
-    // decltype(x) y=c ;
-    // num c1=d;
+    if (alpha == a) 
+    {
+        floor_char = alpha;
+        cout << "floor_char: " << floor_char
+             << "\nalpha   : " << alpha << endl;
+    }
     
-    // if(c1==d)
-    // {
-    //     x=c1;
-    //     cout << x << y << " Barcelona" << endl;
-    // }
-    // std::cout << typeid(x).name() << std::endl;
-    // std::cout << c1 << std::endl;
+    cout 
+    << typeid(floor_char).name() 
+    << " -> Means it is a character type" 
+    << endl;
+    
+    cout 
+    << alpha 
+    << endl;
 
     return 0;
 }
